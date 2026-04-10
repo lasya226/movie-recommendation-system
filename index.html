@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎬 Movie Recommendation System</h1>
+
+        <div class="box">
+            <label>Select a Movie</label>
+            <select id="movieSelect">
+                {% for m in movies %}
+                <option value="{{m}}">{{m}}</option>
+                {% endfor %}
+            </select>
+
+            <button onclick="getRecommendations()">Recommend</button>
+        </div>
+
+        <h2>Recommended Movies</h2>
+        <ul id="results"></ul>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
